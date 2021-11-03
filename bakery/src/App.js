@@ -20,11 +20,15 @@ this.handleButtonClick = this.handleButtonClick.bind(this)
   }
   
   render() {
+    console.log(this.state.activeTab);
     
     return (
       <div>
         <h1>hi</h1>
-        <Button handleClick={this.handleButtonClick}/>
+        <Button 
+        handleClick={this.handleButtonClick}
+        isSelected={this.state.activeTab}
+        />
       </div>
     )
   }
