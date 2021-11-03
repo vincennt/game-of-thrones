@@ -7,7 +7,7 @@ export class App extends Component {
     super()
     this.state = {
 
-      activeTab: "add",
+      activeTab: "",
       items: []
 }
 // bind
