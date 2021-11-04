@@ -5,11 +5,13 @@ export class Character extends Component {
         const { name, title, image } = this.props
         return (
             <>
-              <div>
-                  <h1>{name}</h1> 
-                  <h2>{title}</h2>
-                  <img src={image}/>
-                  <br></br>
+              <div className='container'>
+                  <div className='row bordering mb-3'>
+                    <div className="col-sm"><h2>{name}</h2> </div>
+                    <div className="col-sm"><h3>{title}</h3></div>
+                    <div className="col-sm"><img src={image}/></div>
+                    {/* <br></br> */}
+                  </div>
                </div>  
             </>
         )

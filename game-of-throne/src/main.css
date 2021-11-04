@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.bordering{
+    border: solid 2px black;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+}

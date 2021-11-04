@@ -1,5 +1,7 @@
 import React from 'react'
 import Character from './components/Character';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '/Users/vins/Documents/konexio/react/games-of-throne/game-of-throne/src/main.css'
 
 class App extends React.Component {
   constructor(){
