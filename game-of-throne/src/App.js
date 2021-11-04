@@ -7,16 +7,23 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-	    characters: []
+	    characters: [],
+      favorites : []
   }
   //bind
-
+this.handleFavoriteClick = this.handleFavoriteClick.bind(this)
   }
   //méthode
   componentDidMount(){
     fetch('https://thronesapi.com/api/v2/Characters')
       .then(response => response.json()) // on transforme la donnée reçue en JSON 
       .then(result => {this.setState({ characters : result})}); // on détaille l'action à exécuter sur ce JSON
+  }
+  handleFavoriteClick(){
+      // const favCharacters = [...this.state.favorites]
+      // favCharacters.id.favorites = "selected"
+
+   
   }
 	render() {
     console.log(this.state); 
@@ -27,6 +34,7 @@ class App extends React.Component {
 			  <h1>Game of thrones</h1>
         {this.state.characters.map(character => <
           Character 
+          FavoriteClick={this.handleFavoriteClick}
           name={character.fullName} 
           title ={character.title}
           image ={character.imageUrl}
