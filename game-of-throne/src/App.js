@@ -17,9 +17,19 @@ class App extends React.Component {
       .then(result => {this.setState({ characters : result})}); // on détaille l'action à exécuter sur ce JSON
   }
 	render() {
+    console.log(this.state); 
+    
+
+    
 		return(<>
 			  <h1>Game of thrones</h1>
-        <Character/>
+        {this.state.characters.map(character => <
+          Character 
+          name={character.fullName} 
+          title ={character.title}
+          image ={character.imageUrl}
+          key={character.id}/>)}
+        
       </>
 		)
 	}
